@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package protos;
+
+service Request {
+  rpc GetRandomDataStream(Empty) returns (stream Response) {}
+}
+
+message Response {
+  string message = 1;
+}
+
+message Empty {
+}
